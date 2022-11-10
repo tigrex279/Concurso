@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".terceraPantalla">
+
+    <RadioGroup
+        android:id="@+id/armas"
+        android:layout_width="410dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pregunta2">
+
+        <RadioButton
+            android:id="@+id/muyDificil"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:text="muy dificil"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <RadioButton
+            android:id="@+id/dificl"
+            android:layout_width="134dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="dificil"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Fusil" />
+
+        <RadioButton
+            android:id="@+id/normal"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dificl" />
+
+        <RadioButton
+            android:id="@+id/facil"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="facil"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/normal" />
+
+        <RadioButton
+            android:id="@+id/muyFacil"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="cuerpo a cuerpo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/energia" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/pregunta2"
+        android:layout_width="379dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="48dp"
+        android:text="¿Que dificultad te gusta?"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="245dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="60dp"
+        android:text="Cuestionario overwatch"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/siguiente2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ultimaPregunta"
+        android:text="siguiente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/armas" />
+</androidx.constraintlayout.widget.ConstraintLayout>
