@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-
+    
     fun nombreUsuario(view: View){
         val text = findViewById<EditText>(R.id.Nombre)
         val nombre = text.text.toString()
@@ -29,8 +29,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun ListarUsuarios(view: View){
-            val intent = Intent(this, MostrarLista::class.java).apply {
-            }
-            startActivity(intent)
+           val ListaPuntuaciones = Intent(this, ListaPuntuaciones::class.java)
+            startActivity(ListaPuntuaciones)
         }
     }

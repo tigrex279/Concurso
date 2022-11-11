@@ -18,6 +18,8 @@ import org.apache.commons.csv.CSVPrinter
 import java.io.File
 import java.io.FileWriter
 import java.io.IOException
+import java.nio.file.Files
+import java.nio.file.Files.createDirectory
 
 class hacerFoto : AppCompatActivity() {
 
@@ -82,6 +84,13 @@ class hacerFoto : AppCompatActivity() {
                 val ficheroExiste = ficheroCsv.exists()
 
                 if (!ficheroExiste) {
+
+                    var carpeta = ficheroCsv.parentFile
+
+                    if(!carpeta.exists()){
+                        createDirectory(carpeta.toPath())
+
+                    }
                     ficheroCsv.createNewFile()
                 }
                 val fileWriter = FileWriter(ficheroCsv, true)
